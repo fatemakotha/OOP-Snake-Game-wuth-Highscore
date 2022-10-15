@@ -27,6 +27,8 @@ class Scoreboard(Turtle):
     def reset(self): #***
         if self.score > self.high_score:
             self.high_score = self.score
+            with open("data.txt", mode="w") as data: #***
+                data.write(f"{self.high_score}") #Converts the high_score into a STRING to be able to write in the file ****
         self.score= 0 #if you put this above the if statement it will never ne triggered ***
         self.update_scoreboard()
 
