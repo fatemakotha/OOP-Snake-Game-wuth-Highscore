@@ -27,7 +27,7 @@ class Snake:
 
     def reset(self):
         for seg in self.segments:
-            seg.goto(x=1000, y=1000)
+            seg.goto(x=1000, y=1000) #this makes the snake that lost, goto a location outside the screen
         self.segments.clear() #all segments in the list deleted
         self.create_snake()
         self.head = self.segments[0]
